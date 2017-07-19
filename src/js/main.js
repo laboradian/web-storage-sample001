@@ -49,7 +49,7 @@ const appState = (() => {
     }
     return require("crypto")
       .createHash('sha512')
-      .update(sessData.concat(localData).toString())
+      .update(JSON.stringify(sessData.concat(localData)))
       .digest('hex');
   };
 
@@ -177,8 +177,6 @@ AppComponent.propTypes = {
 const AppContainer = (() => {
 
   const mapStateToProps = (/*state, ownProps*/) => {
-    //console.log('state', state);
-    //console.log('ownProps', ownProps);
 
     let i;
     const sessData = [];
@@ -197,9 +195,6 @@ const AppContainer = (() => {
       })
     }
 
-    //console.log('sessData', sessData);
-    //console.log('localData', localData);
-
     return {
       sessData,
       localData
@@ -214,7 +209,6 @@ const AppContainer = (() => {
         dispatch(updateAll());
       },
       onClickToDeleteSession(key) {
-        console.log('key to delete', key);
         sessionStorage.removeItem(key);
         dispatch(updateAll());
       },
