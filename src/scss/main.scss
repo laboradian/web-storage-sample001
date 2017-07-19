@@ -1,0 +1,30 @@
+@import './bootstrap-variables';
+@import './bootstrap-custom';
+
+body {
+  padding: 20px;
+}
+
+dl {
+  dt {
+    margin-top: 10px;
+  }
+  dd {
+    margin-left: 20px;
+  }
+}
+
+#root {
+  .panel-heading {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  label {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+footer {
+  text-align: right;
+}
