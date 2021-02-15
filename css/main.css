@@ -1,5 +1,10 @@
 body {
   padding: 20px;
+  background-color: #e0ffd6;
+}
+
+.reference h3 {
+  font-size: 20px;
 }
 
 dl dt {
@@ -20,6 +25,14 @@ dl dd {
   margin-right: 5px;
 }
 
+.form-control {
+  display: inline-block;
+  width: 200px;
+}
+
 footer {
   text-align: right;
+}
+footer a {
+  color: #0246AC;
 }

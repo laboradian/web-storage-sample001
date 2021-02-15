@@ -40,10 +40,10 @@ const showSessData = () => {
         const li = document.createElement("li");
         li.appendChild(document.createTextNode(`${key}: ${sessionStorage.getItem(key)}`));
 
-        const a = document.createElement('a');  
-        const link = document.createTextNode("削除する"); 
-        a.appendChild(link);  
-        a.href = ""; 
+        const a = document.createElement('a');
+        const link = document.createTextNode("削除する");
+        a.appendChild(link);
+        a.href = "";
         a.style.marginLeft = "1em";
         a.onclick = () => {
             sessionStorage.removeItem(key);
@@ -65,10 +65,10 @@ const showLocalData = () => {
         const li = document.createElement("li");
         li.appendChild(document.createTextNode(`${key}: ${localStorage.getItem(key)}`));
 
-        const a = document.createElement('a');  
-        const link = document.createTextNode("削除する"); 
-        a.appendChild(link);  
-        a.href = ""; 
+        const a = document.createElement('a');
+        const link = document.createTextNode("削除する");
+        a.appendChild(link);
+        a.href = "";
         a.style.marginLeft = "1em";
         a.onclick = () => {
             localStorage.removeItem(key);
